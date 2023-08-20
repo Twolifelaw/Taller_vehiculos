@@ -23,7 +23,7 @@ public class Concesionario {
     /**
      * Metodo para registrar vehiculos.
      * 
-     * @param vehiculo
+     * @param vehiculo // vehiculo al cual se va registrar.
      */
 
     public void registrarVehiculos(Vehiculo vehiculo) {
@@ -42,7 +42,8 @@ public class Concesionario {
     /**
      * Metodo para buscar vehiculos.
      * 
-     * @param clave
+     * @param clave // la palabra clave con la que se van a comparar los atributos
+     *              para la busqueda.
      */
 
     public void buscarVehiculo(String clave) {
@@ -158,7 +159,7 @@ public class Concesionario {
     /**
      * Metodo para vender vehiculos.
      * 
-     * @param placa
+     * @param placa // la placa del vehiculo el cual se va vender.
      */
 
     public void venderVehiculo(String placa) { // 4. Vender vehiculo y dejar un registro del vehiculo que se vendio.
@@ -243,7 +244,7 @@ public class Concesionario {
     /**
      * Actualiza los datos del vehiculo segun su tipo pide mas.
      * 
-     * @param placa
+     * @param placa // la placa del vehiculo el cual se va actualizar sus datos.
      */
 
     public void actualizarDatosVehiculo(String placa) {
@@ -327,7 +328,7 @@ public class Concesionario {
     /**
      * Metodo para eliminar vehiculo.
      * 
-     * @param placa
+     * @param placa // placa del vehiculo que se va eliminar.
      */
 
     public void eliminarVehiculo(String placa) {

@@ -14,7 +14,7 @@ import modelo.Vehiculo;
 
 import java.util.Scanner;
 
-public class main {
+public class main {//Brandon motealegre.
     public static void main(String[] args) {// main
         Concesionario concesionario = new Concesionario();// se crea la clase para poder llamar los metodos
         Scanner entrada = new Scanner(System.in);
@@ -218,8 +218,8 @@ public class main {
      * Metodo para ingresar numeros por teclado y a la vez validar que estos solo
      * sean numericos.
      * 
-     * @param entrada
-     * @param mensaje
+     * @param entrada //entrada de dato.
+     * @param mensaje // primer mensaje.
      * @return
      */
 
@@ -238,8 +238,8 @@ public class main {
     /**
      * Metodo para ingrersar los atributos comunes entre todos los vehiculos.
      * 
-     * @param entrada
-     * @param vehiculo
+     * @param entrada // entrada de dato
+     * @param vehiculo // vehiculo al cual le pertenecen los atributos.
      */
 
     public static void ingresarAtributosComunes(Scanner entrada, Vehiculo vehiculo) {
