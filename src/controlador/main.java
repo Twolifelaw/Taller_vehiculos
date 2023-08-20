@@ -18,7 +18,7 @@ public class main {
     public static void main(String[] args) {// main
         Concesionario concesionario = new Concesionario();// se crea la clase para poder llamar los metodos
         Scanner entrada = new Scanner(System.in);
-        entrada.useLocale(Locale.US);// cambia el scanner para poder usar punto en los numeros double
+      
         int opcion;
 
         do {// Listo o Menu
