@@ -3,6 +3,7 @@ package modelo;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 import controlador.main;
 
@@ -251,6 +252,7 @@ public class Concesionario {
 
         } else {
             Scanner entrada = new Scanner(System.in);
+            entrada.useLocale(Locale.US);// cambia el scanner para poder usar punto en los numeros double
             for (Vehiculo vehiculo : vehiculos) {
                 if (vehiculo.getPlaca().equalsIgnoreCase(placa)) {// Si el vehiculo existe inicia el metodo de
                                                                   // actualizar datos
