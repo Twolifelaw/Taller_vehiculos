@@ -18,7 +18,7 @@ public class Concesionario {
     private static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
     private static ArrayList<Vehiculo> vehiculos_vendidos = new ArrayList<>();
     private static double venta_totales = 0;
-    private int contadorMotos;
+
 
     /**
      * Metodo para registrar vehiculos.
@@ -204,14 +204,14 @@ public class Concesionario {
         for (Vehiculo vehiculo : vehiculos) {// si el tipo de vehiculo se encuentra dentro del arraylist los contadores
                                              // por su tipo se van sumando.
             if (vehiculo instanceof Moto) {
-                contadorMotos++;
+                contador_motos++;
             } else if (vehiculo instanceof Auto) {
                 contador_autos++;
             } else if (vehiculo instanceof Camion) {
                 contador_camiones++;
             }
         }
-        System.out.println("Cantidad de motos en stock: " + contadorMotos);
+        System.out.println("Cantidad de motos en stock: " + contador_motos);
         System.out.println("Cantidad de autos en stock: " + contador_autos);
         System.out.println("Cantidad de camiones en stock: " + contador_camiones);
     }
@@ -221,24 +221,24 @@ public class Concesionario {
      */
 
     public void mostrarVehiculosVendidos() {// mostrar la cantida de autos vendidos.
-        int contadorMotos = 0;
-        int contadorAutos = 0;
-        int contadorCamiones = 0;
+        int contador_motos = 0;
+        int contador_autos = 0;
+        int contador_camiones = 0;
 
         for (Vehiculo vehiculo : vehiculos_vendidos) {// si el tipo de vehiculo se encuentra dentro los contadores por
                                                       // su tipo se van sumando.
             if (vehiculo instanceof Moto) {
-                contadorMotos++;
+                contador_motos++;
             } else if (vehiculo instanceof Auto) {
-                contadorAutos++;
+                contador_autos++;
             } else if (vehiculo instanceof Camion) {
-                contadorCamiones++;
+                contador_camiones++;
             }
         }
 
-        System.out.println("Cantidad de motos vendidas: " + contadorMotos);
-        System.out.println("Cantidad de autos vendidos: " + contadorAutos);
-        System.out.println("Cantidad de camiones vendidos: " + contadorCamiones);
+        System.out.println("Cantidad de motos vendidas: " + contador_motos);
+        System.out.println("Cantidad de autos vendidos: " + contador_autos);
+        System.out.println("Cantidad de camiones vendidos: " + contador_camiones);
     }
 
     /**
@@ -286,21 +286,21 @@ public class Concesionario {
                         double cilindraje = main.ingresarNumero(entrada, "Ingrese el cilindraje de la moto:");
                         moto.setCilindraje(cilindraje);
 
-                        double tamTanque = main.ingresarNumero(entrada, "Ingrese el tamaño del tanque de la moto:");
-                        moto.setTam_tanque(tamTanque);
+                        double tam_tanque = main.ingresarNumero(entrada, "Ingrese el tamaño del tanque de la moto:");
+                        moto.setTam_tanque(tam_tanque);
 
                     } else if (vehiculo instanceof Auto) {
                         Auto auto = (Auto) vehiculo;
-                        int numPuertas = (int) main.ingresarNumero(entrada, "Ingrese el número de puertas del auto:");
-                        auto.setNum_puertas(numPuertas);
+                        int num_puertas = (int) main.ingresarNumero(entrada, "Ingrese el número de puertas del auto:");
+                        auto.setNum_puertas(num_puertas);
 
                         boolean is_gasolina = main.isGasolina(entrada, "ingrese la actualizacion de combustible: ");
                         auto.setGasolina(is_gasolina);
 
                     } else if (vehiculo instanceof Camion) {
                         Camion camion = (Camion) vehiculo;
-                        double capCarga = main.ingresarNumero(entrada, "Ingrese la capacidad de carga del camión:");
-                        camion.setCap_carga(capCarga);
+                        double cap_carga = main.ingresarNumero(entrada, "Ingrese la capacidad de carga del camión:");
+                        camion.setCap_carga(cap_carga);
                     }
 
                     System.out.println("Datos del vehículo actualizados:");
